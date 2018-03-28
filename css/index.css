@@ -1,0 +1,98 @@
+#main {
+  font-family: 'Mina', sans-serif;
+  width: auto;
+  height: 100%;
+  transition: all 0.4s ease-in-out;
+  background-image: url("/img/background.png");
+}
+
+#main #bg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: black;
+  transition: all 0.2s ease-in-out;
+}
+
+#main #equilibrio {
+  opacity: 1;
+  display: block;
+  width: 40%;
+  height: 45%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-in-out;
+}
+
+#main #equilibrio #mylogo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: auto;
+  z-index: 2;
+  filter: blur(3px);
+  transition: all 0.2s ease-in-out;
+}
+
+#main #equilibrio:hover #mylogo {
+  width: 93%;
+  height: auto;
+  filter: blur(0px);
+  transform: translate(-50%, -80%);
+}
+
+#main #equilibrio:hover .logos {
+  opacity: 1;
+}
+
+#main #equilibrio .logos {
+  transition: all 0.2s ease-in-out;
+  poistion: relative;
+  width: 100%;
+  opacity: 0;
+  margin-top: 25%;
+  height: 50%;
+}
+
+#main #equilibrio .logos .ltable tr {
+  height: 20%;
+}
+
+#main #equilibrio .logos .ltable tr td {
+  padding: 10px;
+}
+
+#main #equilibrio .logos .ltable tr td div {
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+#main #equilibrio .logos .ltable tr td div img {
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+#main #equilibrio .logos .ltable tr td:hover img {
+  width: 50px;
+  height: 50px;
+}
+
+.bg {
+  opacity: 1;
+}
+
+.nobg {
+  opacity: 0;
+}
