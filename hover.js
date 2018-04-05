@@ -1,4 +1,3 @@
-
 $(function() {
     $('#equilibrio').hover(function(){ //Open on hover
         $('#particles-js').addClass("particles");
