@@ -1,14 +1,17 @@
-.bar {
-  margin-left: auto;
-  margin-right: auto;
+.bar hr {
+  animation-duration: 3s;
+  animation-name: slidein;
+  width: 50%;
 }
 
-.bar img {
-  display: block;
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  -webkit-filter: invert(100%);
+@keyframes slidein {
+  from {
+    margin: 50%;
+    width: 0%;
+  }
+  to {
+    width: 50%;
+  }
 }
 
 .about {
@@ -47,8 +50,10 @@
 }
 
 .socialmedia #icon {
-  align: center;
-  margin: 0 auto;
+  margin-bottom: auto;
+  position: absolute;
+  margin-right: 0px;
+  margin-left: 65%;
 }
 
 body {

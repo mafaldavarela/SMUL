@@ -1,12 +1,14 @@
 .bar
-  margin-left: auto
-  margin-right: auto
-  img
-    display: block
-    width: 70%
-    margin-left: auto
-    margin-right: auto
-    -webkit-filter: invert(100%)
+  hr
+    animation-duration: 3s
+    animation-name: slidein
+    @keyframes slidein
+      from
+        margin: 50%
+        width: 0%
+      to
+        width: 50%
+    width: 50%
 .about
   color: white
   s
@@ -33,8 +35,10 @@
             width: 90%
 .socialmedia
   #icon
-    align: center
-    margin: 0 auto
+    margin-bottom: auto
+    position: absolute
+    margin-right: 0px
+    margin-left: 65%
 body
   font-family: 'Mina', sans-serif
   margin-top: 0px
