@@ -1,6 +1,20 @@
+
+// n is number of stars required
+@function multiple-box-shadow ($n)
+  $value: '#{random(2000)}px #{random(2000)}px #FFF'
+  @for $i from 2 through $n
+    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF'
+
+  @return unquote($value)
+
+$shadows-small:  multiple-box-shadow(700)
+$shadows-medium: multiple-box-shadow(200)
+$shadows-big:    multiple-box-shadow(100)
+
 .bar
+  z-index: 2
   hr
-    animation-duration: 3s
+    animation-duration: 1s
     animation-name: slidein
     @keyframes slidein
       from
@@ -10,6 +24,7 @@
         width: 50%
     width: 50%
 .about
+  z-index: 2
   color: white
   s
     margin: 60px
@@ -18,8 +33,10 @@
     text-align: right
     text-decoration: none
   #text
+    z-index: 2
     margin-left: 30px
     tbody
+      z-index: 1
       td
         font-size: 15px
         text-indent: 3em
@@ -33,15 +50,97 @@
             margin-right: auto
             margin-left: auto
             width: 90%
+            -webkit-box-shadow: 0px 0px 85px -5px rgba(0,0,0,0.75)
+            -moz-box-shadow: 0px 0px 85px -5px rgba(0,0,0,0.75)
+            box-shadow: 0px 0px 85px -5px rgba(0,0,0,0.75)
+#follow
+  margin: 60px
+  font-size: 30px
+  text-indent: 10%
+  text-align: right
+  text-decoration: none
 .socialmedia
+  z-index: 2
+  width: 100%
+  height: 80px
   #icon
-    margin-bottom: auto
-    position: absolute
-    margin-right: 0px
-    margin-left: 75%
+    width: 50%
+    margin-right: auto
+    margin-left: auto
+    align-items: center
+    justify-content: center
+    display: flex
+    a
+      img
+        margin-left: 10px
+        margin-right: 10px
+        margin-top: 30px
+        width: 40px
+        height: auto
 body
   font-family: 'Mina', sans-serif
-  margin-top: 0px
+  margin-top: 20px
   margin-left: 0px
   margin-right: 0px
-  background-image: url("/img/background.png")
+  z-index: -1
+  #stars-bg
+    position: fixed
+    right: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    z-index: -1
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%)
+    overflow: hidden
+    #stars
+      width: 1px
+      height: 1px
+      background: transparent
+      box-shadow: $shadows-small
+      &:after
+        content: " "
+        position: absolute
+        top: 2000px
+        width: 1px
+        height: 1px
+        background: transparent
+        box-shadow: $shadows-small
+    #stars2
+      width: 2px
+      height: 2px
+      background: transparent
+      box-shadow: $shadows-medium
+      &:after
+        content: " "
+        position: absolute
+        top: 2000px
+        width: 2px
+        height: 2px
+        background: transparent
+        box-shadow: $shadows-medium
+    #stars3
+      width: 3px
+      height: 3px
+      background: transparent
+      box-shadow: $shadows-big
+      &:after
+        content: " "
+        position: absolute
+        top: 2000px
+        width: 3px
+        height: 3px
+        background: transparent
+        box-shadow: $shadows-big
+
+.stars
+  animation: animStar 100s linear infinite
+.stars2
+  animation: animStar 200s linear infinite
+.stars3
+  animation: animStar 300s linear infinite
+
+@keyframes animStar
+  from
+    transform: translateY(0px)
+  to
+    transform: translateY(-2000px)
