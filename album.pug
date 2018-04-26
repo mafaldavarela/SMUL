@@ -9,13 +9,25 @@ html
     script(src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js")
     link( rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
     script( src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
-    script(src="js/particles.js")
   body.main#main
+    div#covers
+      table.covers
+        tbody.ctable
+          tr
+            td
+              a(href="#")
+                div.parte_de_mim
+                  img(src="img/parte_frente.png").front
+                  img(src="img/parte_tras.png").back
+            td
+              a(href="#")
+                div.luz
+                  img(src="img/luz_frente.png").front
+                  img(src="img/luz_tras.png").back
     div#stars-bg
       div#stars.stars
       div#stars2.stars2
       div#stars3.stars3
     div#player-bg
     div#player
-  head
-    script(src="js/hover.js")
+      iframe(width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/116345831&color=%23090a0f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true")
