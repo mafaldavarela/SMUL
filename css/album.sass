@@ -29,38 +29,41 @@ $shadows-big:    multiple-box-shadow(100)
       width: 60%
       margin: auto
       opacity: 1
-      height: 200px
+      height: 250px
       .ctable
         tr
           td
+            perspective: 1000px
+            cursor: pointer
+            &:hover
+              div
+                transform: rotateY(180deg)
             div
-              height: 200px
-              width: 200px
+              height: 250px
+              width: 250px
               margin: auto
               display: flex
+              perspective: 1000px
+              transform-style: preserve-3d
               align-items: center
               justify-content: center
               display: block
+              transition: all 1s ease-in-out
               img
-                margin: auto
-                height: 200px
-                width: 200px
-                transition: all 0.4s ease-in-out
+                height: 230px
+                width: 230px
+                backface-visibility: hidden
+                position: absolute
+                z-index: 5
               .back
-                opacity: 0
-                transform: translate(0px, -200px)
-              &:hover
-                img.back
-                  opacity: 1
-                  transform: translate(0px, -200px)
-                img.front
-                  opacity: 0
+                z-index: 4
+                transform: rotateY(180deg)
 
   #player-bg
     width: 80%
     height: 100%
     position: absolute
-    top: 300px
+    top: 350px
     margin-bottom: 100px
     background-image: url("/img/album.jpeg")
     filter: blur(50%)
@@ -71,7 +74,7 @@ $shadows-big:    multiple-box-shadow(100)
     width: 80%
     height: 100%
     position: absolute
-    top: 300px
+    top: 350px
     margin-bottom: 100px
     left: 50%
     margin-left: -40%
@@ -79,7 +82,8 @@ $shadows-big:    multiple-box-shadow(100)
     -moz-box-shadow: 0px 0px 85px -5px rgba(0,0,0,0.75)
     box-shadow: 0px 0px 85px -5px rgba(0,0,0,0.75)
     iframe
-      opacity: 0.7
+      transition: all 0.6s ease-in-out
+      position: absolute
 
   #stars-bg
     z-index: -1
@@ -136,6 +140,14 @@ $shadows-big:    multiple-box-shadow(100)
   animation: animStar 200s linear infinite
 .stars3
   animation: animStar 300s linear infinite
+.on
+  z-index: 5
+  opacity: 0.6
+.off
+  z-index: 4
+  opacity: 0
+
+
 
 @keyframes animStar
   from
