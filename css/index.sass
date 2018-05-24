@@ -73,19 +73,24 @@ $shadows-big:    multiple-box-shadow(100)
   #about
     display: block
     position: absolute
-    top: 100%
+    top: 110%
     z-index: 3
     color: white
     opacity: 1
-    s
-      margin: 60px
+    h1
+      margin-top: 10px
+      margin-bottom: 50px
+      margin-left: auto
+      margin-right: auto
       font-size: 30px
-      text-indent: 10%
-      text-align: right
-      text-decoration: none
+      text-align: center
+      text-transform: uppercase
     #text
       z-index: 3
-      margin-left: 30px
+      margin-bottom: 50px
+      margin-left: auto
+      margin-right: auto
+      width: 70%
       tbody
         z-index: 2
         td
@@ -104,16 +109,6 @@ $shadows-big:    multiple-box-shadow(100)
               -webkit-box-shadow: 0px 0px 85px -5px rgba(0,0,0,0.75)
               -moz-box-shadow: 0px 0px 85px -5px rgba(0,0,0,0.75)
               box-shadow: 0px 0px 85px -5px rgba(0,0,0,0.75)
-  #follow
-    display: block
-    position: absolute
-    top: 190%
-    z-index: 3
-    font-size: 30px
-    text-indent: 10%
-    text-align: right
-    color: white
-    text-decoration: none
   .socialmedia
     z-index: 3
     width: 100%
@@ -191,7 +186,77 @@ $shadows-big:    multiple-box-shadow(100)
                 filter: blur(0px)
                 width: 50px
                 height: 50px
-
+  #covers
+    z-index: 3
+    position: absolute
+    height: 170px
+    width: 100%
+    top: 1200px
+    max-width: 100%
+    text-align: center
+    text-transform: uppercase
+    color: white
+    .covers
+      position: relative
+      transition: all 0.2s ease-in-out
+      width: 60%
+      margin: auto
+      opacity: 1
+      height: 350px
+      text-align: left
+      .ctable
+        tr
+          td
+            perspective: 1000px
+            cursor: pointer
+            &:hover
+              div
+                transform: rotateY(180deg)
+            div
+              height: 250px
+              width: 250px
+              margin: auto
+              display: flex
+              perspective: 1000px
+              transform-style: preserve-3d
+              align-items: center
+              justify-content: center
+              display: block
+              transition: all 0.6s ease-in-out
+              img
+                height: 230px
+                width: 230px
+                backface-visibility: hidden
+                position: absolute
+                z-index: 5
+              .back
+                z-index: 4
+                transform: rotateY(180deg)
+  #player-bg
+    width: 70%
+    height: 100%
+    position: absolute
+    top: 1600px
+    margin-bottom: 100px
+    background-image: url("/img/album.jpeg")
+    filter: blur(50%)
+    opacity: 0.8
+    left: 50%
+    margin-left: -35%
+  #player
+    width: 70%
+    height: 100%
+    position: absolute
+    top: 1600px
+    margin-bottom: 100px
+    left: 50%
+    margin-left: -35%
+    -webkit-box-shadow: 0px 0px 85px -5px rgba(0,0,0,0.75)
+    -moz-box-shadow: 0px 0px 85px -5px rgba(0,0,0,0.75)
+    box-shadow: 0px 0px 85px -5px rgba(0,0,0,0.75)
+    iframe
+      transition: all 0.6s ease-in-out
+      position: absolute
 
 .particles
   opacity: 1
@@ -204,6 +269,13 @@ $shadows-big:    multiple-box-shadow(100)
   animation: animStar 200s linear infinite
 .stars3
   animation: animStar 300s linear infinite
+
+.on
+  z-index: 5
+  opacity: 0.6
+.off
+  z-index: 4
+  opacity: 0
 
 @keyframes animStar
   from

@@ -10,6 +10,8 @@ html
     link( rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
     script( src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
     script(src="js/particles.js")
+    script(src="js/clickable.js")
+    script(src="js/hover.js")
   body.main#main
     div#equilibrio
       img#mylogo( src="/img/KC_Logo.png")
@@ -17,11 +19,11 @@ html
         tbody.ltable
           tr
             td
-              a(href="#")
+              a(href="#about")
                 div.about
                   img(src="img/logos/about.png")
             td
-              a(href="#")
+              a(href="#covers")
                 div.music
                   img(src="img/logos/music.png")
             td
@@ -34,20 +36,17 @@ html
       div#stars2.stars2
       div#stars3.stars3
     div#about
-      s Sobre mim
+      h1 Sobre mim
       table#text
         tbody
           tr
             td#collumn
               p "The Toxic Void's second album is a masterclass in progressive black metal. Be sure not to miss their live show - there's a whole different sound to it"- The MetaMag - I'm a paragraph. 
               p Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a littl more about you. This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. Make your company stand out and show your visitors who you are.
-              p "The Toxic Void's second album is a masterclass in progressive black metal. Be sure not to miss their live show - there's a whole different sound to it"- The MetaMag - I'm a paragraph. 
-              p Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a littl more about you. This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. Make your company stand out and show your visitors who you are.
             td#collumn
               div#imgdiv
                 image( src="img/about.jpeg" type="image/png")
     div.socialmedia
-      p#follow Follow me on:
       div#icon     
         a(href="https://www.facebook.com/equilibriop95/" target="_blank") 
           img(src="img/facebook.png" alt="facebook")
@@ -61,6 +60,26 @@ html
           img(src="img/youtube.png" alt="youtube")
         a(href="https://equilbrio.bandcamp.com/releases" target="_blank") 
           img(src="img/bandcamp.png" alt="bandcamp")
-head
-    script(src="js/hover.js")
+    body.main#main
+      div#covers
+        h1 A minha música
+        table.covers
+          tbody.ctable
+            tr
+              td#parte
+                div.parte_de_mim
+                  img(src="img/parte_frente.png").front
+                  img(src="img/parte_tras.png").back
+              td#luz
+                div.luz
+                  img(src="img/luz_frente.png").front
+                  img(src="img/luz_tras.png").back
+      div#stars-bg
+        div#stars.stars
+        div#stars2.stars2
+        div#stars3.stars3
+      div#player-bg
+      div#player
+        iframe(width="100%" height="100%" sharing="false" scrolling="no" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/116345831&color=%23090a0f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true")#player_parte.off
+        iframe(width="100%" height="100%" sharing="false" scrolling="no" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/354364609&color=%23090a0f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true")#player_luz.on
   

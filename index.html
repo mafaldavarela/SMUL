@@ -9,15 +9,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/particles.js"></script>
+    <script src="js/clickable.js"></script>
+    <script src="js/hover.js"></script>
   </head>
   <body id="main" class="main">
     <div id="equilibrio"><img id="mylogo" src="/img/KC_Logo.png">
       <table class="logos">
         <tbody class="ltable">
           <tr>
-            <td><a href="#">
+            <td><a href="#about">
                 <div class="about"><img src="img/logos/about.png"></div></a></td>
-            <td><a href="#">
+            <td><a href="#covers">
                 <div class="music"><img src="img/logos/music.png"></div></a></td>
             <td><a href="#">
                 <div class="concerts"><img src="img/logos/concerts.png"></div></a></td>
@@ -32,13 +34,11 @@
       <div id="stars3" class="stars3"></div>
     </div>
     <div id="about">
-      <s>Sobre mim</s>
+      <h1>Sobre mim</h1>
       <table id="text">
         <tbody>
           <tr>
             <td id="collumn">
-              <p>"The Toxic Void's second album is a masterclass in progressive black metal. Be sure not to miss their live show - there's a whole different sound to it"- The MetaMag - I'm a paragraph. </p>
-              <p>Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a littl more about you. This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. Make your company stand out and show your visitors who you are.</p>
               <p>"The Toxic Void's second album is a masterclass in progressive black metal. Be sure not to miss their live show - there's a whole different sound to it"- The MetaMag - I'm a paragraph. </p>
               <p>Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a littl more about you. This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. Make your company stand out and show your visitors who you are.</p>
             </td>
@@ -52,11 +52,34 @@
       </table>
     </div>
     <div class="socialmedia">
-      <p id="follow">Follow me on:</p>
       <div id="icon">    <a href="https://www.facebook.com/equilibriop95/" target="_blank"> <img src="img/facebook.png" alt="facebook"></a><a href="https://www.instagram.com/___equilibrio___/" target="_blank"> <img src="img/instagram.png" alt="instagram"></a><a href="https://soundcloud.com/equil-brio" target="_blank"> <img src="img/soundcloud.png" alt="soundcloud"></a><a href="https://open.spotify.com/album/07DI3jbiuwFN9OOhyGxz1o" target="_blank"> <img src="img/spotify.png" alt="spotify"></a><a href="https://www.youtube.com/channel/UCKwIqLzfmX2RcFxAmC3_2qg" target="_blank"> <img src="img/youtube.png" alt="youtube"></a><a href="https://equilbrio.bandcamp.com/releases" target="_blank"> <img src="img/bandcamp.png" alt="bandcamp"></a></div>
     </div>
+    <body id="main" class="main">
+      <div id="covers">
+        <h1>A minha música</h1>
+        <table class="covers">
+          <tbody class="ctable">
+            <tr>
+              <td id="parte">
+                <div class="parte_de_mim"><img src="img/parte_frente.png" class="front"><img src="img/parte_tras.png" class="back"></div>
+              </td>
+              <td id="luz">
+                <div class="luz"><img src="img/luz_frente.png" class="front"><img src="img/luz_tras.png" class="back"></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="stars-bg">
+        <div id="stars" class="stars"></div>
+        <div id="stars2" class="stars2"></div>
+        <div id="stars3" class="stars3"></div>
+      </div>
+      <div id="player-bg"></div>
+      <div id="player">
+        <iframe width="100%" height="100%" sharing="false" scrolling="no" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/116345831&amp;color=%23090a0f&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" id="player_parte" class="off"></iframe>
+        <iframe width="100%" height="100%" sharing="false" scrolling="no" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/354364609&amp;color=%23090a0f&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" id="player_luz" class="on"></iframe>
+      </div>
+    </body>
   </body>
 </html>
-<head>
-  <script src="js/hover.js"></script>
-</head>
